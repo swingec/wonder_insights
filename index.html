@@ -986,7 +986,11 @@ v:shapes="Picture_x0020_4"><![endif]></span></p>
 </div>
 <div>
 	
-<model-viewer src="test.gltf" camera-controls auto-rotate></model-viewer>
+<model-viewer src="test.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.57" shadow-softness="0.4">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+</model-viewer>
 	
 </div>
 </body>
