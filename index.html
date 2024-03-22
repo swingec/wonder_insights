@@ -6,6 +6,8 @@ xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
+<script type = "module" src = "https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
@@ -975,21 +977,26 @@ alt="A screenshot of a chart&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_4"><![endif]></span></p>
 
 </div>
-    <div id="holder">
-        <div id="text">
-            <h1 class="sample-text">Play around with the model on the right!</h1>
-            <h1 class="sample-text">Just watch it rotate on its own or do it yourself with the mouse</h1>
-            <h1 class="sample-text">You can also zoom in the model!</h1>
-        </div>
-        <div id="model">
-            <model-viewer src="test.glb" alt="A 3D model of a robot" auto-rotate="" camera-controls="" background-color="#455A64"></model-viewer>
-        </div>
-    </div>
+    	<div id="holder">
+	        <div id="text">
+	            <h1 class="sample-text">Play around with the model on the right!</h1>
+	            <h1 class="sample-text">Just watch it rotate on its own or do it yourself with the mouse</h1>
+	            <h1 class="sample-text">You can also zoom in the model!</h1>
+	</div>
+	<div id="model">
+            	<model-viewer src="test.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.57" shadow-softness="0.4">
+		    <div class="progress-bar hide" slot="progress-bar">
+		        <div class="update-bar"></div>
+		    </div>
+		    <button slot="ar-button" id="ar-button">
+		        View in your space
+		    </button>
+		    <div id="ar-prompt">
+		        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+		    </div>
+		</model-viewer>
 
-    <!-- Loads model-viewer for modern browsers -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-    <!-- Loads model-viewer for older browsers -->
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    	</div>
 
 	
 </body>
